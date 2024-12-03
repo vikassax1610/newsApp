@@ -1,0 +1,154 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3em;
+    color: #fff;
+}
+#news-heading{
+    color:white;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #0be1d6;
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-search-input {
+    padding: 8px;
+    border-radius: 20px;
+    border: none;
+    margin-right: 10px;
+    width: 250px;
+}
+
+#navbar-search-button {
+    padding: 8px 15px;
+    border-radius: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* News Grid Styles */
+.news-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.news-card {
+    background: linear-gradient(120deg, #69e1ec 0%, #97dda7 100%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s forwards;
+}
+
+.news-card img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.news-card h2 {
+    color: white;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.news-card p {
+    color: white;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+.news-card a {
+    
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+.news-card:hover {
+    transform: scale(1.05);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@media (max-width: 1130px) {
+    .navbar{
+        width:100%;
+    }
+    .navbar ul li a{
+        margin: 0px;
+        font-size: 15px;
+    }
+    #navbar-search-input{
+        padding: 5px;
+        width: 140px;
+        margin: 5px;
+    }
+    #navbar-search-button{
+        padding: 5px;
+        width: 69px;
+    }
+    .menu-icon {
+        font-size:16px;
+    }
+}
